@@ -96,6 +96,12 @@ Follow **[STUDY-PATH.md](STUDY-PATH.md)** for a gap-free reading order.
 
 ---
 
+## Related guide
+
+- [Solo software project management & requirements](https://github.com/belittlewho/solo-software-project-management) — breakdown, RTM, release NFRs
+
+---
+
 ## License
 
 MIT
