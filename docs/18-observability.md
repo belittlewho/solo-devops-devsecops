@@ -44,6 +44,8 @@ OpenTelemetry → Jaeger/Tempo — debug latency across services.
 
 Page yourself only on SLO burn — avoid alert fatigue.
 
+**Hands-on:** [Part 44](44-observability-stack-lab.md), [Part 51 workshop](51-workshop-observability-install.md), [examples/monitoring/](../examples/monitoring/).
+
 ---
 
 ## Contrast PaaS
