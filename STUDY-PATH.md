@@ -1,8 +1,7 @@
 # Complete study path — DevOps & DevSecOps
 
-> **Honest scope:** This path covers solo/Linux-first foundations through VPS + CI/CD + DevSecOps basics. Topics not yet covered (SRE depth, K8s hands-on, cloud VPC, data ops, etc.) are listed in **[GAPS.md](GAPS.md)**.
-
-Practice on **real Linux**: cheap VPS (Hetzner, DigitalOcean, Linode), local VM (Multipass, UTM), or **WSL2** for learning commands — deploy targets should be Linux or containers unless Part 27 applies.
+Practice on **real Linux**: VPS, homelab VM, or WSL2 for CLI (deploy to VPS for real infra).  
+**Gap index (all parts mapped):** [GAPS.md](GAPS.md)
 
 ---
 
@@ -10,107 +9,92 @@ Practice on **real Linux**: cheap VPS (Hetzner, DigitalOcean, Linode), local VM 
 
 | Order | Part | Outcome |
 |-------|------|---------|
-| A0 | [00 Glossary](docs/00-glossary-and-map.md) | DevOps vs SRE vs platform; Linux role |
-| A1 | [01 Mindset & lifecycle](docs/01-devops-mindset-lifecycle.md) | Plan → code → build → test → release → deploy → operate → monitor |
-| A2 | [02 Linux vs other infra](docs/02-linux-vs-other-infrastructure.md) | When Linux, when PaaS, when K8s |
-| A3 | [12 IaaS/PaaS/SaaS](docs/12-iaas-paas-saas-models.md) | Shared responsibility model |
-
-**Checkpoint:** Explain to yourself who owns patching for EC2 vs RDS vs Vercel.
+| A0 | [00 Glossary](docs/00-glossary-and-map.md) | Terms & platform map |
+| A1 | [01 Mindset](docs/01-devops-mindset-lifecycle.md) | SDLC, CALMS, DORA |
+| A2 | [02 Linux vs other](docs/02-linux-vs-other-infrastructure.md) | Platform choice |
+| A3 | [12 IaaS/PaaS/SaaS](docs/12-iaas-paas-saas-models.md) | Shared responsibility |
 
 ---
 
-## Phase B — Linux operator skills (Days 4–10)
+## Phase B — Linux operator (Days 4–12)
 
 | Order | Part | Outcome |
 |-------|------|---------|
-| B1 | [03 Linux essentials](docs/03-linux-essentials.md) | FS, users, permissions, packages |
-| B2 | [04 Networking](docs/04-networking-dns-tls.md) | IP, ports, DNS, TLS, firewalls |
-| B3 | [05 systemd](docs/05-systemd-services.md) | Services, logs, boot |
-| B4 | [20 Secrets & SSH](docs/20-secrets-identity-iam.md) | Keys, sudo, least privilege |
-| B5 | [11 Workshop](docs/11-workshop-first-linux-server.md) | Hardened VPS + deploy static site |
-
-**Checkpoint:** SSH key-only login, ufw, nginx serving HTTPS, `systemctl status` clean.
+| B1 | [03 Linux essentials](docs/03-linux-essentials.md) | CLI baseline |
+| B2 | [32 Linux deep dive](docs/32-linux-operations-deep-dive.md) | LVM, debug, SELinux |
+| B3 | [04 Networking](docs/04-networking-dns-tls.md) | DNS, TLS, ufw |
+| B4 | [33 Edge & CDN](docs/33-edge-networking-cdn-vpn.md) | Cloudflare, WireGuard |
+| B5 | [05 systemd](docs/05-systemd-services.md) | Services |
+| B6 | [20 Secrets & SSH](docs/20-secrets-identity-iam.md) | Keys, IAM |
+| B7 | [11 Workshop VPS](docs/11-workshop-first-linux-server.md) | First server |
 
 ---
 
-## Phase C — Delivery pipeline (Days 11–17)
+## Phase C — Delivery (Days 13–20)
 
 | Order | Part | Outcome |
 |-------|------|---------|
-| C1 | [06 Git & CI basics](docs/06-git-and-ci-fundamentals.md) | Trunk, PR checks |
-| C2 | [07 CI/CD](docs/07-cicd-pipelines.md) | Build, test, deploy stages |
-| C3 | [08 Docker & Compose](docs/08-containers-docker-compose.md) | Images, volumes, compose stack |
-| C4 | [10 Reverse proxy](docs/10-reverse-proxy-web.md) | TLS termination, routing |
-| C5 | [17 Environments](docs/17-environments-promotion.md) | dev/staging/prod |
-| C6 | [26 GitOps & strategies](docs/26-gitops-deployment-strategies.md) | Rolling, blue/green |
-
-**Checkpoint:** Push to main → CI green → deploy to staging automatically.
+| C1 | [06–07 Git & CI/CD](docs/06-git-and-ci-fundamentals.md) | Pipelines |
+| C2 | [34 CI/CD advanced](docs/34-cicd-advanced-platforms.md) | Monorepo, GHCR |
+| C3 | [08–35 Containers](docs/08-containers-docker-compose.md) | Docker prod patterns |
+| C4 | [10 Reverse proxy](docs/10-reverse-proxy-web.md) | nginx TLS |
+| C5 | [17 Environments](docs/17-environments-promotion.md) | staging/prod |
+| C6 | [26 GitOps & deploy](docs/26-gitops-deployment-strategies.md) | Strategies |
 
 ---
 
-## Phase D — Infrastructure at scale (Days 18–24)
+## Phase D — IaC & cloud (Days 21–28)
 
 | Order | Part | Outcome |
 |-------|------|---------|
-| D1 | [13 Terraform](docs/13-terraform-iac.md) | Declarative cloud resources |
-| D2 | [14 Ansible](docs/14-ansible-config-management.md) | Repeatable server config |
-| D3 | [15 Cloud map](docs/15-cloud-providers-map.md) | VPC, IAM, object storage |
-| D4 | [16 Homelab / VMs](docs/16-bare-metal-vms-homelab.md) | Proxmox, libvirt concepts |
-| D5 | [09 Kubernetes](docs/09-kubernetes-concepts.md) | When K8s is worth it |
-
-**Checkpoint:** One Terraform module + Ansible role for same server profile.
+| D1 | [13–38 Terraform](docs/13-terraform-iac.md) | State, policy |
+| D2 | [39 Packer & alt IaC](docs/39-iac-alternatives-packer.md) | Pulumi/CDK |
+| D3 | [14–50 Ansible workshop](docs/50-workshop-terraform-ansible.md) | TF + Ansible |
+| D4 | [40–41 Cloud VPC & services](docs/40-cloud-vpc-iam-storage.md) | AWS patterns |
+| D5 | [15 Cloud map](docs/15-cloud-providers-map.md) | Multi-cloud names |
+| D6 | [16 Homelab](docs/16-bare-metal-vms-homelab.md) | VMs |
 
 ---
 
-## Phase E — Operate & secure (Days 25–35)
+## Phase E — Data & K8s (Days 29–38)
 
 | Order | Part | Outcome |
 |-------|------|---------|
-| E1 | [18 Observability](docs/18-observability.md) | Logs, metrics, alerts |
-| E2 | [19 Backup & DR](docs/19-backup-disaster-recovery.md) | RPO/RTO, restore drill |
-| E3 | [21 DevSecOps](docs/21-devsecops-shift-left.md) | Shift left map |
-| E4 | [22 Linux hardening](docs/22-linux-hardening.md) | sshd, fail2ban, updates |
-| E5 | [23 Supply chain](docs/23-app-supply-chain-security.md) | SCA, SAST, SBOM |
-| E6 | [24 Runtime security](docs/24-runtime-zero-trust.md) | Network policy lite |
-| E7 | [25 Compliance logging](docs/25-compliance-logging-audit.md) | Audit trail |
-| E8 | [27 Windows contrast](docs/27-windows-infra-contrast.md) | If you touch .NET/IIS |
-| E9 | [28 FinOps](docs/28-finops-solo-constraints.md) | Cost caps |
-| E10 | [99 FAQ](docs/99-faq-cheatsheet.md) | Reference |
+| E1 | [42–43 Data & queues](docs/42-postgresql-operations.md) | Postgres, Redis |
+| E2 | [09–36 K8s](docs/36-kubernetes-hands-on-helm.md) | Helm, Ingress |
+| E3 | [52 k3s workshop](docs/52-workshop-k3s-deploy.md) | Cluster lab |
+| E4 | [37 Service mesh / ECS](docs/37-service-mesh-ecs-notes.md) | Optional |
 
-**Checkpoint:** Runbook + on-call playbook for yourself; restore from backup once.
+---
+
+## Phase F — SRE & observability (Days 39–45)
+
+| Order | Part | Outcome |
+|-------|------|---------|
+| F1 | [29 SLO](docs/29-sre-slo-error-budgets.md) + [SLO template](templates/slo-document.md) | Error budgets |
+| F2 | [30 Incidents & chaos](docs/30-incidents-postmortems-oncall-chaos.md) | SEV, postmortem |
+| F3 | [31 Load testing](docs/31-load-testing-capacity.md) | k6 |
+| F4 | [18 + 44 + 51 Observability](docs/51-workshop-observability-install.md) | Prometheus stack |
+| F5 | [19 Backup & DR](docs/19-backup-disaster-recovery.md) + game day template | Restore drill |
+
+---
+
+## Phase G — Security & scale (Days 46–55)
+
+| Order | Part | Outcome |
+|-------|------|---------|
+| G1 | [21–23 DevSecOps base](docs/21-devsecops-shift-left.md) | Shift left |
+| G2 | [45–46 Advanced sec & compliance](docs/45-devsecops-advanced.md) | DAST, SOC2 |
+| G3 | [22 Hardening](docs/22-linux-hardening.md) | CIS style |
+| G4 | [48 HA & autoscaling](docs/48-high-availability-autoscaling.md) | HPA, multi-AZ |
+| G5 | [47 Platform / IDP](docs/47-platform-engineering-idp.md) | Golden paths |
+| G6 | [49 Platforms](docs/49-platforms-arm-serverless-mobile.md) | ARM, serverless |
+| G7 | [27 Windows](docs/27-windows-infra-contrast.md) | Contrast |
+| G8 | [28 FinOps](docs/28-finops-solo-constraints.md) | Cost |
+| G9 | [99 FAQ](docs/99-faq-cheatsheet.md) | Cheat sheet |
 
 ---
 
 ## Concept coverage matrix
 
-| Topic | Part |
-|-------|------|
-| DevOps culture & CALMS | 01 |
-| SDLC / DORA metrics | 01, 07 |
-| Linux CLI & FHS | 03 |
-| Windows vs Linux ops | 02, 27 |
-| WSL2 vs prod Linux | 02 |
-| macOS dev / Linux prod | 02 |
-| TCP/IP, DNS, HTTP/S | 04 |
-| systemd, journald | 05 |
-| GitHub Actions / CI | 06, 07 |
-| Docker, Compose | 08 |
-| Kubernetes | 09 |
-| nginx, Caddy | 10 |
-| First server lab | 11 |
-| IaaS/PaaS/SaaS | 12 |
-| Terraform | 13 |
-| Ansible | 14 |
-| AWS/GCP/Azure concepts | 15 |
-| Bare metal / Proxmox | 16 |
-| Staging/prod | 17 |
-| Prometheus/Grafana/Loki (concepts) | 18 |
-| Backups | 19 |
-| SSH, Vault, IAM | 20 |
-| DevSecOps pipeline | 21 |
-| CIS hardening | 22 |
-| Dependabot, Trivy, Semgrep | 23 |
-| WAF, mTLS (intro) | 24 |
-| Audit logs | 25 |
-| GitOps, Argo (intro) | 26 |
-| Cost control | 28 |
+See [GAPS.md](GAPS.md) for topic → part mapping (complete).

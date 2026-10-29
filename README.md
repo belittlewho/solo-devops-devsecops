@@ -2,7 +2,7 @@
 
 Learn **DevOps** (how software is built, shipped, and operated) and **DevSecOps** (security woven into that flow) with a **Linux-first** lens — and clear contrasts to Windows, cloud PaaS, serverless, and managed services.
 
-Follow **[STUDY-PATH.md](STUDY-PATH.md)** for reading order. **Known missing topics:** **[GAPS.md](GAPS.md)**.
+Follow **[STUDY-PATH.md](STUDY-PATH.md)** for reading order (Phases A–G). **Topic index:** **[GAPS.md](GAPS.md)** maps every subject to Parts 29–52+.
 
 **Repo:** practice commands on a Linux VM or WSL2; see [Part 2 — Linux vs other platforms](docs/02-linux-vs-other-infrastructure.md).
 
@@ -82,6 +82,35 @@ Follow **[STUDY-PATH.md](STUDY-PATH.md)** for reading order. **Known missing top
 | 28 | Cost, FinOps & solo constraints | [docs/28-finops-solo-constraints.md](docs/28-finops-solo-constraints.md) |
 | 99 | FAQ & cheat sheet | [docs/99-faq-cheatsheet.md](docs/99-faq-cheatsheet.md) |
 
+### Extended (SRE, depth, cloud, workshops)
+
+| Part | Topic | File |
+|------|--------|------|
+| 29 | SLI, SLO & error budgets | [docs/29-sre-slo-error-budgets.md](docs/29-sre-slo-error-budgets.md) |
+| 30 | Incidents, postmortems, on-call, chaos | [docs/30-incidents-postmortems-oncall-chaos.md](docs/30-incidents-postmortems-oncall-chaos.md) |
+| 31 | Load testing & capacity | [docs/31-load-testing-capacity.md](docs/31-load-testing-capacity.md) |
+| 32 | Linux operations deep dive | [docs/32-linux-operations-deep-dive.md](docs/32-linux-operations-deep-dive.md) |
+| 33 | CDN, email DNS, VPN, WAF, HAProxy | [docs/33-edge-networking-cdn-vpn.md](docs/33-edge-networking-cdn-vpn.md) |
+| 34 | CI/CD advanced (GitLab, monorepo, GHCR) | [docs/34-cicd-advanced-platforms.md](docs/34-cicd-advanced-platforms.md) |
+| 35 | Containers production & ECS | [docs/35-containers-production-advanced.md](docs/35-containers-production-advanced.md) |
+| 36 | Kubernetes hands-on (Helm, Ingress) | [docs/36-kubernetes-hands-on-helm.md](docs/36-kubernetes-hands-on-helm.md) |
+| 37 | Service mesh & ECS notes | [docs/37-service-mesh-ecs-notes.md](docs/37-service-mesh-ecs-notes.md) |
+| 38 | Terraform advanced & policy | [docs/38-terraform-advanced-policy.md](docs/38-terraform-advanced-policy.md) |
+| 39 | Pulumi, CDK, Packer, cloud-init | [docs/39-iac-alternatives-packer.md](docs/39-iac-alternatives-packer.md) |
+| 40 | VPC, IAM, S3, landing zone | [docs/40-cloud-vpc-iam-storage.md](docs/40-cloud-vpc-iam-storage.md) |
+| 41 | RDS, Redis, SQS, Lambda, CloudFront | [docs/41-cloud-managed-services-serverless.md](docs/41-cloud-managed-services-serverless.md) |
+| 42 | PostgreSQL operations & PITR | [docs/42-postgresql-operations.md](docs/42-postgresql-operations.md) |
+| 43 | Redis, queues, Kafka, OpenSearch | [docs/43-redis-queues-search.md](docs/43-redis-queues-search.md) |
+| 44 | Observability stack (Prometheus, Loki, OTel) | [docs/44-observability-stack-lab.md](docs/44-observability-stack-lab.md) |
+| 45 | DevSecOps advanced (DAST, Falco, PKI) | [docs/45-devsecops-advanced.md](docs/45-devsecops-advanced.md) |
+| 46 | SOC2, PCI, HIPAA (ops mapping) | [docs/46-compliance-frameworks.md](docs/46-compliance-frameworks.md) |
+| 47 | Platform engineering & IDP | [docs/47-platform-engineering-idp.md](docs/47-platform-engineering-idp.md) |
+| 48 | HA, multi-region, autoscaling | [docs/48-high-availability-autoscaling.md](docs/48-high-availability-autoscaling.md) |
+| 49 | ARM64, macOS, BSD, serverless lab | [docs/49-platforms-arm-serverless-mobile.md](docs/49-platforms-arm-serverless-mobile.md) |
+| 50 | **Workshop:** Terraform + Ansible | [docs/50-workshop-terraform-ansible.md](docs/50-workshop-terraform-ansible.md) |
+| 51 | **Workshop:** Observability install | [docs/51-workshop-observability-install.md](docs/51-workshop-observability-install.md) |
+| 52 | **Workshop:** k3s deploy | [docs/52-workshop-k3s-deploy.md](docs/52-workshop-k3s-deploy.md) |
+
 ---
 
 ## Templates
@@ -93,6 +122,16 @@ Follow **[STUDY-PATH.md](STUDY-PATH.md)** for reading order. **Known missing top
 | [cicd-pipeline-spec.md](templates/cicd-pipeline-spec.md) | Pipeline design doc |
 | [threat-model-lite.md](templates/threat-model-lite.md) | DevSecOps sketch |
 | [infra-decision-record.md](templates/infra-decision-record.md) | ADR for infra choices |
+| [slo-document.md](templates/slo-document.md) | SLI/SLO & error budget policy |
+| [postmortem.md](templates/postmortem.md) | Blameless incident review |
+| [on-call-policy.md](templates/on-call-policy.md) | Rotation & escalation |
+| [game-day-checklist.md](templates/game-day-checklist.md) | DR / game day drill |
+
+## Examples
+
+| Path | Purpose |
+|------|---------|
+| [examples/monitoring/](examples/monitoring/) | Prometheus/Grafana/Loki Compose starter |
 
 ---
 
