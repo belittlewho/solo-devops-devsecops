@@ -2,7 +2,7 @@
 
 Learn **DevOps** (how software is built, shipped, and operated) and **DevSecOps** (security woven into that flow) with a **Linux-first** lens — and clear contrasts to Windows, cloud PaaS, serverless, and managed services.
 
-Follow **[STUDY-PATH.md](STUDY-PATH.md)** for a gap-free reading order.
+Follow **[STUDY-PATH.md](STUDY-PATH.md)** for reading order. **Known missing topics:** **[GAPS.md](GAPS.md)**.
 
 **Repo:** practice commands on a Linux VM or WSL2; see [Part 2 — Linux vs other platforms](docs/02-linux-vs-other-infrastructure.md).
 

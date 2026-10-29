@@ -1,4 +1,6 @@
-# Complete study path — DevOps & DevSecOps (no knowledge gaps)
+# Complete study path — DevOps & DevSecOps
+
+> **Honest scope:** This path covers solo/Linux-first foundations through VPS + CI/CD + DevSecOps basics. Topics not yet covered (SRE depth, K8s hands-on, cloud VPC, data ops, etc.) are listed in **[GAPS.md](GAPS.md)**.
 
 Practice on **real Linux**: cheap VPS (Hetzner, DigitalOcean, Linode), local VM (Multipass, UTM), or **WSL2** for learning commands — deploy targets should be Linux or containers unless Part 27 applies.
 
