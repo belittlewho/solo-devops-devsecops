@@ -1,0 +1,6 @@
+.env
+.env.*
+*.tfstate
+*.tfstate.*
+.terraform/
+secrets/
